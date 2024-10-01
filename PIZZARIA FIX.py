@@ -8,7 +8,6 @@ user_size = ""
 user_cheese = ""
 # PRICE
 price = 0
-
 # ALL VARIANT PRICE Rp.50.000
 # DISPLAY AND ASK MENU
 print ("============= WELCOME TO PIZZARIA FASTBEAR =============")
@@ -42,8 +41,6 @@ elif menu_choice == "6":
     user_option = "Sausage Cheese"
 else:
     print ("input the correct value!!")
-exit
-
 # DISPLAY AND ASK CRUST
 print (f"\nChoose your Crust Choice")
 print ("CRUST\t\t| PRICE")
@@ -62,8 +59,10 @@ elif crust_choice == "3":
     price += 7000
     user_crust = "Cheesy Crust"
 else:
-    print ("input the correct value!!")
-exit
+    print ("Value didn't exist, we set to default")
+    crust_choice == "1"
+    user_crust = "Pan Crust"
+    price += 0
 
 # DISPLAY AND ASK SIZE
 print (f"\nChoose your Pizza Size")
@@ -83,8 +82,10 @@ elif size_choice == "3":
     price += 15000
     user_size = "Large"
 else:
-    print ("input the correct value!!")
-    exit
+    print ("Value didn't exist, we set to default")
+    size_choice == "1"
+    user_size = "Personal"
+    price += 0
 
 # ASK FOR EXTRA CHEESE
 extra_cheese = input("\nDo you want to add Extra Cheese for Rp.13.000? (yes/no): ")
@@ -96,12 +97,14 @@ elif extra_cheese == "no":
     price += 0
     user_cheese = "No Extra Cheese"
 else :
-    print ("input the correct value!!")
-exit
+    print ("Value didn't exist, we set to default")
+    extra_cheese == "no"
+    price += 0
 
 print (F" ============= SUMMARY ORDER =============")
 print (f"PIZZA\t\t: {user_option}\nCRUST\t\t: {user_crust}\nSIZE\t\t: {user_size}\nEXTRA CHEESE\t: {user_cheese}")
 print (F" ============= TOTAL BILL =============")
 print (f"THANKYOU FOR ORDERING IN PIZZARIA FASTBEAR")
 print (f"Your Total bill is: Rp.{price:3,.0f}")
+print (F" ============= END OF RECEIPT =============")
 
